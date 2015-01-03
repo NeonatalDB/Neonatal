@@ -1,0 +1,79 @@
+﻿<%@ Master Language="VB" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script type ="text/javascript">
+    function textboxMultilineMaxNumber(txt,maxLen){
+        try{
+            if(txt.value.length > (maxLen-1))return false;
+           }catch(e){
+        }
+    }
+</script>
+
+<script type ="text/javascript">
+<!--
+function delayer(){
+    window.location = "MobLogon.aspx?ReturnUrl=PatientList.aspx"
+}
+//-->
+</script>
+<script type ="text/javascript">
+<!-- Begin
+function expand() {
+//window.moveTo(0,0);
+//window.resizeTo(700, 1500);
+window.moveTo(0,0);
+window.resizeTo(700, screen.availHeight);
+}
+// screen.availHeight End -->
+</script>
+<script runat="server">
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs)
+
+    End Sub
+</script>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>Neonatal Database for Handheld Device</title>
+<link href="mobile.css" rel="stylesheet" type="text/css" media="handheld" />
+<meta name="viewport" content="width=550" />
+</head>
+<body onload="expand(), setTimeout('delayer()', 1200000);setTimeout(function() { window.scrollTo(0, 1) }, 100);" ;>
+
+<form id="form1" runat="server">
+<asp:ScriptManager id="ScriptManager1" runat="server" EnablePageMethods="True"></asp:ScriptManager>
+<div id="wrapper">
+
+	<!-- end #header -->
+	       <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+	<!-- end #main -->
+	<div><br />
+<p style="text-align: left">
+                <asp:LoginView ID="MainLoginView" runat="server" >
+                <LoggedInTemplate>
+                <asp:LoginName ID="LoginName1" runat="server" /> is logged on 
+                 [&nbsp <asp:LoginStatus ID="LoginStatus1" runat="server" logoutaction="Redirect" LogoutPageUrl="~/Mobile/MobLogon.aspx?ReturnUrl=PatientList.aspx" />&nbsp ]
+               </LoggedInTemplate>
+                <AnonymousTemplate>
+                <a href="../Mobile/MobLogon.aspx?ReturnUrl=PatientList.aspx">[ You are logged off - click here to Logon ]</a>
+                </AnonymousTemplate>
+                </asp:LoginView> </p> 
+
+<p style="font-size:xx-small">
+                This Handheld site has been designed for 7" Tablets but can be used on any handheld device or PC.</br> 
+                The 7" tablet is gripped better in the hand and fits into a pocket when touching patient / paperwork.
+                <br />
+                - cheers <a href = "mailto:Ian.Callander@sswahs.nsw.gov.au">Ian Callander</a>
+                </p>  
+        </div>
+	<!-- end #footer -->
+</div>	
+</form>
+</body>
+</html>

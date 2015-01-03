@@ -1,0 +1,890 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Neodataset" targetNamespace="http://tempuri.org/Neodataset.xsd" xmlns:mstns="http://tempuri.org/Neodataset.xsd" xmlns="http://tempuri.org/Neodataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="NeonatalConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="NeonatalConnectionString1 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.NeonatalConnectionString1.ConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="NeonatalConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="NeonatalConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.NeonatalConnectionString.ConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NeoStaffTableAdapter" GeneratorDataComponentClassName="NeoStaffTableAdapter" Name="NeoStaff" UserDataComponentName="NeoStaffTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NeonatalConnectionString1 (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT     NeoStaff.StaffID, NeoStaff.ServerID, NeoStaff.HospitalID, NeoStaff.StaffName, NeoStaff.Job, NeoStaff.StaffOrder, NeoStaff.usercode, NeoStaff.passw, 
+                      NeoStaff.passwdatechanged, NeoStaff.lastlogon, NeoStaff.menuaudit, NeoStaff.menulockdata, NeoStaff.menuclinical1, NeoStaff.menuclinical2, 
+                      NeoStaff.menuclinical3, NeoStaff.menufollowup, NeoStaff.menureports, NeoStaff.ProvNo, NeoStaff.Specs, NeoStaff.cate, NeoStaff.term, NeoStaff.yr, 
+                      NeoStaff.Provtit, NeoStaff.ProvDr, NeoStaff.ProvDr1, NeoStaff.Provsec, NeoStaff.P_addr1, NeoStaff.P_addr1a, NeoStaff.P_addr2, NeoStaff.P_addr3, 
+                      NeoStaff.P_code, NeoStaff.P_wkarea, NeoStaff.P_wkphone, NeoStaff.P_hmarea, NeoStaff.P_hmphone, NeoStaff.P_faxarea, NeoStaff.P_faxphone, 
+                      NeoStaff.P_mobile, NeoStaff.P_pager, NeoStaff.P_note, CASE WHEN P_email IS NULL THEN '' ELSE P_email END AS email, NeoStaff.menuhospadmin, 
+                      NeoStaff.menuserveradmin, NeoStaff.inactive, NeoStaff.HomeSupport, NeoStaff.UpdateLists, NeoStaff.StatusUpdate, NeoStaff.MenuFMU, 
+                      _Hospitals.HospName, NeoStaff.NICUSALL
+FROM         NeoStaff LEFT OUTER JOIN
+                      _Hospitals ON NeoStaff.HospitalID = _Hospitals.HospitalID
+WHERE     (NOT (NeoStaff.passw IS NULL)) AND (NeoStaff.inactive = 0)</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StaffID" DataSetColumn="StaffID" />
+              <Mapping SourceColumn="ServerID" DataSetColumn="ServerID" />
+              <Mapping SourceColumn="HospitalID" DataSetColumn="HospitalID" />
+              <Mapping SourceColumn="StaffName" DataSetColumn="StaffName" />
+              <Mapping SourceColumn="Job" DataSetColumn="Job" />
+              <Mapping SourceColumn="StaffOrder" DataSetColumn="StaffOrder" />
+              <Mapping SourceColumn="usercode" DataSetColumn="usercode" />
+              <Mapping SourceColumn="passw" DataSetColumn="passw" />
+              <Mapping SourceColumn="passwdatechanged" DataSetColumn="passwdatechanged" />
+              <Mapping SourceColumn="lastlogon" DataSetColumn="lastlogon" />
+              <Mapping SourceColumn="menuaudit" DataSetColumn="menuaudit" />
+              <Mapping SourceColumn="menulockdata" DataSetColumn="menulockdata" />
+              <Mapping SourceColumn="menuclinical1" DataSetColumn="menuclinical1" />
+              <Mapping SourceColumn="menuclinical2" DataSetColumn="menuclinical2" />
+              <Mapping SourceColumn="menuclinical3" DataSetColumn="menuclinical3" />
+              <Mapping SourceColumn="menufollowup" DataSetColumn="menufollowup" />
+              <Mapping SourceColumn="menureports" DataSetColumn="menureports" />
+              <Mapping SourceColumn="ProvNo" DataSetColumn="ProvNo" />
+              <Mapping SourceColumn="Specs" DataSetColumn="Specs" />
+              <Mapping SourceColumn="cate" DataSetColumn="cate" />
+              <Mapping SourceColumn="term" DataSetColumn="term" />
+              <Mapping SourceColumn="yr" DataSetColumn="yr" />
+              <Mapping SourceColumn="Provtit" DataSetColumn="Provtit" />
+              <Mapping SourceColumn="ProvDr" DataSetColumn="ProvDr" />
+              <Mapping SourceColumn="ProvDr1" DataSetColumn="ProvDr1" />
+              <Mapping SourceColumn="Provsec" DataSetColumn="Provsec" />
+              <Mapping SourceColumn="P_addr1" DataSetColumn="P_addr1" />
+              <Mapping SourceColumn="P_addr1a" DataSetColumn="P_addr1a" />
+              <Mapping SourceColumn="P_addr2" DataSetColumn="P_addr2" />
+              <Mapping SourceColumn="P_addr3" DataSetColumn="P_addr3" />
+              <Mapping SourceColumn="P_code" DataSetColumn="P_code" />
+              <Mapping SourceColumn="P_wkarea" DataSetColumn="P_wkarea" />
+              <Mapping SourceColumn="P_wkphone" DataSetColumn="P_wkphone" />
+              <Mapping SourceColumn="P_hmarea" DataSetColumn="P_hmarea" />
+              <Mapping SourceColumn="P_hmphone" DataSetColumn="P_hmphone" />
+              <Mapping SourceColumn="P_faxarea" DataSetColumn="P_faxarea" />
+              <Mapping SourceColumn="P_faxphone" DataSetColumn="P_faxphone" />
+              <Mapping SourceColumn="P_mobile" DataSetColumn="P_mobile" />
+              <Mapping SourceColumn="P_pager" DataSetColumn="P_pager" />
+              <Mapping SourceColumn="P_note" DataSetColumn="P_note" />
+              <Mapping SourceColumn="menuhospadmin" DataSetColumn="menuhospadmin" />
+              <Mapping SourceColumn="menuserveradmin" DataSetColumn="menuserveradmin" />
+              <Mapping SourceColumn="inactive" DataSetColumn="inactive" />
+              <Mapping SourceColumn="HomeSupport" DataSetColumn="HomeSupport" />
+              <Mapping SourceColumn="UpdateLists" DataSetColumn="UpdateLists" />
+              <Mapping SourceColumn="StatusUpdate" DataSetColumn="StatusUpdate" />
+              <Mapping SourceColumn="MenuFMU" DataSetColumn="MenuFMU" />
+              <Mapping SourceColumn="HospName" DataSetColumn="HospName" />
+              <Mapping SourceColumn="email" DataSetColumn="email" />
+              <Mapping SourceColumn="NICUSALL" DataSetColumn="NICUSALL" />
+              <Mapping SourceColumn="DrugManual" DataSetColumn="DrugManual" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="NeonatalConnectionString1 (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT     NeoStaff.StaffID, NeoStaff.ServerID, NeoStaff.HospitalID, NeoStaff.StaffName, NeoStaff.Job, NeoStaff.StaffOrder, NeoStaff.usercode, NeoStaff.passw, 
+                      NeoStaff.passwdatechanged, NeoStaff.lastlogon, NeoStaff.menuaudit, NeoStaff.menulockdata, NeoStaff.menuclinical1, NeoStaff.menuclinical2, 
+                      NeoStaff.menuclinical3, NeoStaff.menufollowup, NeoStaff.menureports, NeoStaff.ProvNo, NeoStaff.Specs, NeoStaff.cate, NeoStaff.term, NeoStaff.yr, 
+                      NeoStaff.Provtit, NeoStaff.ProvDr, NeoStaff.ProvDr1, NeoStaff.Provsec, NeoStaff.P_addr1, NeoStaff.P_addr1a, NeoStaff.P_addr2, NeoStaff.P_addr3, 
+                      NeoStaff.P_code, NeoStaff.P_wkarea, NeoStaff.P_wkphone, NeoStaff.P_hmarea, NeoStaff.P_hmphone, NeoStaff.P_faxarea, NeoStaff.P_faxphone, 
+                      NeoStaff.P_mobile, NeoStaff.P_pager, NeoStaff.P_note, CASE WHEN P_email IS NULL THEN '' ELSE P_email END AS email, NeoStaff.menuhospadmin, 
+                      NeoStaff.menuserveradmin, NeoStaff.inactive, NeoStaff.HomeSupport, NeoStaff.UpdateLists, NeoStaff.StatusUpdate, NeoStaff.MenuFMU, 
+                      _Hospitals.HospName, NeoStaff.NICUSALL, NeoStaff.MobNursingNotes, NeoStaff.MobComment, NeoStaff.DrugManual
+FROM         NeoStaff LEFT OUTER JOIN
+                      _Hospitals ON NeoStaff.HospitalID = _Hospitals.HospitalID
+WHERE     (NOT (NeoStaff.passw IS NULL)) AND (NeoStaff.inactive = 0) AND (NeoStaff.usercode = @username)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="username" ColumnName="usercode" DataSourceName="Neonatal.dbo.NeoStaff" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@username" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="usercode" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="NeonatalConnectionString1 (Web.config)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByNICUSALL" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetDataByNICUSALL" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByNICUSALL" UserSourceName="GetDataByNICUSALL1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT     _Hospitals.HospName, NeoStaff.StaffName, _job.Label, NeoStaff.menureports, NeoStaff.NICUSALL
+FROM         NeoStaff LEFT OUTER JOIN
+                      _job ON NeoStaff.Job = _job.Number LEFT OUTER JOIN
+                      _Hospitals ON NeoStaff.HospitalID = _Hospitals.HospitalID
+WHERE     (NOT (NeoStaff.passw IS NULL)) AND (NeoStaff.inactive = 0) AND (NeoStaff.NICUSALL &lt;&gt; 0)</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AuditTrail2TableAdapter" GeneratorDataComponentClassName="AuditTrail2TableAdapter" Name="AuditTrail2" UserDataComponentName="AuditTrail2TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NeonatalConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByHospid" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetDataByHospid" GeneratorSourceName="FillByHospid" GetMethodModifier="Public" GetMethodName="GetDataByHospid" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetDataByHospid" UserSourceName="FillByHospid">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT     TOP (100) PERCENT LEFT(dbo._Hospitals.HospName, 35) AS HospName, LEFT(table1.StaffName, 30) AS StaffName, LEFT(table1.Position, 25) 
+                      AS Position, COUNT(*) AS Activity, MAX(table1.EditDate) AS Recent
+FROM         (SELECT     TOP (100) PERCENT dbo.NeoStaff.StaffName, dbo._job.Label AS Position, dbo.AuditTrail.EditDate, 
+                                              dbo.PMI.BName + N', ' + ISNULL(dbo.PMI.BFName, N'') AS Baby, dbo.AuditTrail.FormEdit, dbo.AuditTrail.PatientID, 
+                                              dbo.NeoStaff.HospitalID
+                       FROM          dbo.AuditTrail LEFT OUTER JOIN
+                                              dbo._job RIGHT OUTER JOIN
+                                              dbo.NeoStaff ON dbo._job.Number = dbo.NeoStaff.Job ON dbo.AuditTrail.StaffID = dbo.NeoStaff.StaffID LEFT OUTER JOIN
+                                              dbo.PMI ON dbo.AuditTrail.PatientID = dbo.PMI.NeonatalID
+                       WHERE      (dbo.AuditTrail.EditDate &gt; GETDATE() - 1) and hospitalid = @hospid) AS table1 LEFT OUTER JOIN
+                      dbo._Hospitals ON table1.HospitalID = dbo._Hospitals.HospitalID LEFT OUTER JOIN
+                      dbo.Identities ON table1.PatientID = dbo.Identities.PatientID AND table1.HospitalID = dbo.Identities.HospitalID
+GROUP BY dbo._Hospitals.HospName, table1.StaffName, table1.Position
+ORDER BY HospName, Activity DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="hospid" ColumnName="" DataSourceName="" DataTypeServer="nvarchar(4)" DbType="String" Direction="Input" ParameterName="@hospid" Precision="0" Scale="0" Size="4" SourceColumn="" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="HospName" DataSetColumn="HospName" />
+              <Mapping SourceColumn="StaffName" DataSetColumn="StaffName" />
+              <Mapping SourceColumn="Position" DataSetColumn="Position" />
+              <Mapping SourceColumn="Activity" DataSetColumn="Activity" />
+              <Mapping SourceColumn="Recent" DataSetColumn="Recent" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="NeonatalConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT     TOP (100) PERCENT LEFT(dbo._Hospitals.HospName, 35) AS HospName, LEFT(table1.StaffName, 30) AS StaffName, LEFT(table1.Position, 25) 
+                      AS Position, COUNT(*) AS Activity, MAX(table1.EditDate) AS Recent
+FROM         (SELECT     TOP (100) PERCENT dbo.NeoStaff.StaffName, dbo._job.Label AS Position, dbo.AuditTrail.EditDate, 
+                                              dbo.PMI.BName + N', ' + ISNULL(dbo.PMI.BFName, N'') AS Baby, dbo.AuditTrail.FormEdit, dbo.AuditTrail.PatientID, 
+                                              dbo.NeoStaff.HospitalID
+                       FROM          dbo.AuditTrail LEFT OUTER JOIN
+                                              dbo._job RIGHT OUTER JOIN
+                                              dbo.NeoStaff ON dbo._job.Number = dbo.NeoStaff.Job ON dbo.AuditTrail.StaffID = dbo.NeoStaff.StaffID LEFT OUTER JOIN
+                                              dbo.PMI ON dbo.AuditTrail.PatientID = dbo.PMI.NeonatalID
+                       WHERE      (dbo.AuditTrail.EditDate &gt; GETDATE() - 1)) AS table1 LEFT OUTER JOIN
+                      dbo._Hospitals ON table1.HospitalID = dbo._Hospitals.HospitalID LEFT OUTER JOIN
+                      dbo.Identities ON table1.PatientID = dbo.Identities.PatientID AND table1.HospitalID = dbo.Identities.HospitalID
+GROUP BY dbo._Hospitals.HospName, table1.StaffName, table1.Position
+ORDER BY HospName, Activity DESC</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AuditTrail1TableAdapter" GeneratorDataComponentClassName="AuditTrail1TableAdapter" Name="AuditTrail1" UserDataComponentName="AuditTrail1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NeonatalConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fillbyusername" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetDatabyusername" GeneratorSourceName="Fillbyusername" GetMethodModifier="Public" GetMethodName="GetDatabyusername" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetDatabyusername" UserSourceName="Fillbyusername">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT     TOP (100) PERCENT NeoStaff.StaffName, _job.Label AS Position, AuditTrail.EditDate, PMI.BName + N', ' + ISNULL(PMI.BFName, N'') AS Baby, 
+                      AuditTrail.FormEdit 
+FROM         AuditTrail LEFT OUTER JOIN
+                      _job RIGHT OUTER JOIN
+                      NeoStaff ON _job.Number = NeoStaff.Job ON AuditTrail.StaffID = NeoStaff.StaffID LEFT OUTER JOIN
+                      PMI ON AuditTrail.PatientID = PMI.NeonatalID
+WHERE     (AuditTrail.EditDate &gt; GETDATE() - 7) AND (Neostaff.usercode = @usercode)
+order by editdate desc</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="usercode" ColumnName="usercode" DataSourceName="Neonatal.dbo.NeoStaff" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@usercode" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="usercode" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StaffName" DataSetColumn="StaffName" />
+              <Mapping SourceColumn="Position" DataSetColumn="Position" />
+              <Mapping SourceColumn="EditDate" DataSetColumn="EditDate" />
+              <Mapping SourceColumn="Baby" DataSetColumn="Baby" />
+              <Mapping SourceColumn="FormEdit" DataSetColumn="FormEdit" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NICUSExportTableAdapter" GeneratorDataComponentClassName="NICUSExportTableAdapter" Name="NICUSExport" UserDataComponentName="NICUSExportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NeonatalConnectionString (Web.config)" DbObjectName="Neonatal.dbo.NICUSExport" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="GetData">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT     NICUSExport.NICUSHS, COUNT(*) AS CLD36
+FROM         NICUSExport INNER JOIN
+                      _Hospitals ON NICUSExport.NICUSHS = _Hospitals.HospitalID
+WHERE     (_Hospitals.CareLevel &gt;= 5) AND (NICUSExport.[Birth Year] BETWEEN @loweryear AND @upperyear) AND (NICUSExport.GA BETWEEN @lowerGA AND 
+                      @upperGA)
+GROUP BY NICUSExport.NICUSHS</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="loweryear" ColumnName="Birth Year" DataSourceName="Neonatal.dbo.NICUSExport" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@loweryear" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Birth Year" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="upperyear" ColumnName="Birth Year" DataSourceName="Neonatal.dbo.NICUSExport" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@upperyear" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Birth Year" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="lowerGA" ColumnName="GA" DataSourceName="Neonatal.dbo.NICUSExport" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@lowerGA" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="GA" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="upperGA" ColumnName="GA" DataSourceName="Neonatal.dbo.NICUSExport" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@upperGA" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="GA" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="NeonatalConnectionString (Web.config)" DbObjectName="Neonatal.dbo.NICUSExport" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="YearLine" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="YearLine" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="YearLine" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>select [birth year] as birthyear, 
+count(CASE WHEN NICUSHS='Q230' THEN nicushs END) as [A], count(CASE WHEN NICUSHS='A208' THEN nicushs END) as [B], 
+count(CASE WHEN NICUSHS='D210' THEN nicushs END) as [C], count(CASE WHEN NICUSHS='C238' THEN nicushs END) as [D], count(CASE WHEN NICUSHS='A207' THEN nicushs END) as [E], 
+count(CASE WHEN NICUSHS='C220' THEN nicushs END) as [F], count(CASE WHEN NICUSHS='B218' THEN nicushs END) as [G], count(CASE WHEN NICUSHS='D219' THEN nicushs END) as [H], 
+count(CASE WHEN NICUSHS='D209' THEN nicushs END) as [I], count(CASE WHEN NICUSHS='T202' THEN nicushs END) as [J]
+from nicusexport where ga between 24 and 26 and [birth year] between 2000 and 2009 and died = 0 group by [birth year] order by [birth year]
+
+</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="NeonatalConnectionString (Web.config)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="IanTest" GetMethodModifier="Public" GetMethodName="IanTest" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="IanTest" UserSourceName="IanTest1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>select right([Birth Year],2) as [Output], 
+100*Count(CASE WHEN NICUSHS='Q230' and CLD36 = -1 THEN NICUSHS END)/(Count(CASE WHEN NICUSHS='Q230' THEN NICUSHS END)+1) as [A], 
+100*Count(CASE WHEN NICUSHS='A208' and CLD36 = -1 THEN NICUSHS END)/(Count(CASE WHEN NICUSHS='A208' THEN NICUSHS END)+1) as [B], 
+100*Count(CASE WHEN NICUSHS='D210' and CLD36 = -1 THEN NICUSHS END)/(Count(CASE WHEN NICUSHS='D210' THEN NICUSHS END)+1) as [C], 
+100*Count(CASE WHEN NICUSHS='C238' and CLD36 = -1 THEN NICUSHS END)/(Count(CASE WHEN NICUSHS='C238' THEN NICUSHS END)+1) as [D], 
+100*Count(CASE WHEN NICUSHS='A207' and CLD36 = -1 THEN NICUSHS END)/(Count(CASE WHEN NICUSHS='A207' THEN NICUSHS END)+1) as [E], 
+100*Count(CASE WHEN NICUSHS='C220' and CLD36 = -1 THEN NICUSHS END)/(Count(CASE WHEN NICUSHS='C220' THEN NICUSHS END)+1) as [F], 
+100*Count(CASE WHEN NICUSHS='B218' and CLD36 = -1 THEN NICUSHS END)/(Count(CASE WHEN NICUSHS='B218' THEN NICUSHS END)+1) as [G], 
+100*Count(CASE WHEN NICUSHS='D219' and CLD36 = -1 THEN NICUSHS END)/(Count(CASE WHEN NICUSHS='D219' THEN NICUSHS END)+1) as [H], 
+100*Count(CASE WHEN NICUSHS='D209' and CLD36 = -1 THEN NICUSHS END)/(Count(CASE WHEN NICUSHS='D209' THEN NICUSHS END)+1) as [I], 
+100*Count(CASE WHEN NICUSHS='T202' and CLD36 = -1 THEN NICUSHS END)/(Count(CASE WHEN NICUSHS='T202' THEN NICUSHS END)+1) as [J] 
+from [NICUSExport]
+where ga between 26 and 27
+group by [Birth Year]</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NeoStaffReportsTableAdapter" GeneratorDataComponentClassName="NeoStaffReportsTableAdapter" Name="NeoStaffReports" UserDataComponentName="NeoStaffReportsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NeonatalConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT     NeoStaffReports.ReportID, NeoStaffReports.Report, NeoStaffReports.Start, 
+                      CASE WHEN NeoStaffReports.usercontrolled = - 1 THEN 'Yes' ELSE 'No' END AS [User Controlled], ReportServerReports.Frequency
+FROM         NeoStaff INNER JOIN
+                      NeoStaffReports ON NeoStaff.StaffID = NeoStaffReports.StaffID INNER JOIN
+                      ReportServerReports ON NeoStaffReports.Report = ReportServerReports.Report
+WHERE     (NeoStaff.usercode = @usercode) AND (NeoStaffReports.Stop IS NULL)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="usercode" ColumnName="usercode" DataSourceName="Neonatal.dbo.NeoStaff" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@usercode" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="usercode" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Report" DataSetColumn="Report" />
+              <Mapping SourceColumn="Start" DataSetColumn="Start" />
+              <Mapping SourceColumn="User Controlled" DataSetColumn="User Controlled" />
+              <Mapping SourceColumn="ReportID" DataSetColumn="ReportID" />
+              <Mapping SourceColumn="Frequency" DataSetColumn="Frequency" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="NeonatalConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy" UserSourceName="InsertQuery">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>INSERT INTO NeoStaffReports
+                      (StaffID, Report)
+SELECT     StaffID, 'Report1' AS Expr1
+FROM         NeoStaff
+WHERE     (usercode = @usercode)</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="NeonatalConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="True" GeneratorSourceName="Unsubscribe" Modifier="Public" Name="Unsubscribe" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy1" UserSourceName="Unsubscribe">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>UPDATE neostaffreports set stop = getdate() where reportid = @reportid</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="reportid" ColumnName="ReportID" DataSourceName="Neonatal.dbo.NeoStaffReports" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@reportid" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ReportID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReportServerReportsTableAdapter" GeneratorDataComponentClassName="ReportServerReportsTableAdapter" Name="ReportServerReports" UserDataComponentName="ReportServerReportsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NeonatalConnectionString (Web.config)" DbObjectName="Neonatal.dbo.ReportServerReports" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT     ReportServerReports_1.Report, ReportServerReports_1.Description, ReportServerReports_1.Frequency, ReportServerReports_1.LocalQuery
+FROM         (SELECT     NeoStaff.usercode, ReportServerReports.Report
+                       FROM          NeoStaff INNER JOIN
+                                              NeoStaffReports ON NeoStaff.StaffID = NeoStaffReports.StaffID INNER JOIN
+                                              ReportServerReports ON NeoStaffReports.Report = ReportServerReports.Report
+                       WHERE      (NeoStaffReports.stop is null and NeoStaff.usercode = @usercode)) AS derivedtbl_1 RIGHT OUTER JOIN
+                      ReportServerReports AS ReportServerReports_1 ON derivedtbl_1.Report = ReportServerReports_1.Report
+WHERE     (ReportServerReports_1.Usercontrol = - 1) AND (ReportServerReports_1.inactive = 0) AND (derivedtbl_1.Report IS NULL)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="usercode" ColumnName="" DataSourceName="" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@usercode" Precision="0" Scale="0" Size="50" SourceColumn="" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Report" DataSetColumn="Report" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Frequency" DataSetColumn="Frequency" />
+              <Mapping SourceColumn="LocalQuery" DataSetColumn="LocalQuery" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="NeonatalConnectionString (Web.config)" DbObjectName="Neonatal.dbo.ReportServerReports" DbObjectType="Table" GenerateShortCommands="True" GeneratorSourceName="ReportURL" Modifier="Public" Name="ReportURL" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy" UserSourceName="ReportURL">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT URL FROM ReportServerReports where report = @report</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="report" ColumnName="Report" DataSourceName="Neonatal.dbo.ReportServerReports" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@report" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Report" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NeoStaffReports1TableAdapter" GeneratorDataComponentClassName="NeoStaffReports1TableAdapter" Name="NeoStaffReports1" UserDataComponentName="NeoStaffReports1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NeonatalConnectionString (Web.config)" DbObjectName="Neonatal.dbo.NeoStaffReports" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [dbo].[NeoStaffReports] WHERE (([StaffID] = @Original_StaffID) AND ([Report] = @Original_Report))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_StaffID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="StaffID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Report" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Report" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [dbo].[NeoStaffReports] ([StaffID], [Report], [Start], [Stop], [CreateDate], [usercontrolled]) VALUES (@StaffID, @Report, @Start, @Stop, @CreateDate, @usercontrolled);
+SELECT StaffID, Report, Start, Stop, CreateDate, usercontrolled, ReportID FROM NeoStaffReports WHERE (Report = @Report) AND (StaffID = @StaffID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@StaffID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="StaffID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Report" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Report" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Start" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="Start" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Stop" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="Stop" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CreateDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="CreateDate" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@usercontrolled" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="usercontrolled" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT StaffID, Report, Start, Stop, CreateDate, usercontrolled, ReportID FROM dbo.NeoStaffReports</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [dbo].[NeoStaffReports] SET [StaffID] = @StaffID, [Report] = @Report, [Start] = @Start, [Stop] = @Stop, [CreateDate] = @CreateDate, [usercontrolled] = @usercontrolled WHERE (([StaffID] = @Original_StaffID) AND ([Report] = @Original_Report));
+SELECT StaffID, Report, Start, Stop, CreateDate, usercontrolled, ReportID FROM NeoStaffReports WHERE (Report = @Report) AND (StaffID = @StaffID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@StaffID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="StaffID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Report" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Report" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Start" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="Start" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Stop" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="Stop" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CreateDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="CreateDate" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@usercontrolled" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="usercontrolled" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_StaffID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="StaffID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Report" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Report" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StaffID" DataSetColumn="StaffID" />
+              <Mapping SourceColumn="Report" DataSetColumn="Report" />
+              <Mapping SourceColumn="Start" DataSetColumn="Start" />
+              <Mapping SourceColumn="Stop" DataSetColumn="Stop" />
+              <Mapping SourceColumn="CreateDate" DataSetColumn="CreateDate" />
+              <Mapping SourceColumn="usercontrolled" DataSetColumn="usercontrolled" />
+              <Mapping SourceColumn="ReportID" DataSetColumn="ReportID" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="NeonatalConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy" UserSourceName="InsertQuery">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>INSERT INTO NeoStaffReports (StaffID, Report, Start, Stop, CreateDate, usercontrolled)
+values (@staffid, @ReportID, GETDATE(), NULL, GETDATE() , - 1)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="staffid" ColumnName="StaffID" DataSourceName="Neonatal.dbo.NeoStaffReports" DataTypeServer="uniqueidentifier" DbType="Guid" Direction="Input" ParameterName="@staffid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="16" SourceColumn="StaffID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="ReportID" ColumnName="Report" DataSourceName="Neonatal.dbo.NeoStaffReports" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@ReportID" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Report" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+          <DbSource ConnectionRef="NeonatalConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="True" GeneratorSourceName="Subscribe" MethodsParameterType="CLR" Modifier="Public" Name="Subscribe" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy" UserSourceName="Subscribe">
+            <InsertCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="True">
+                <CommandText>INSERT into neostaffreports (staffid, report)
+select staffid , 'Report1' from neostaff where usercode = 'callai'</CommandText>
+                <Parameters>
+                </Parameters>
+              </DbCommand>
+            </InsertCommand>
+          </DbSource>
+          <DbSource ConnectionRef="NeonatalConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="True" GeneratorSourceName="Encode" MethodsParameterType="CLR" Modifier="Public" Name="Encode" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy1" UserSourceName="Encode">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="True">
+                <CommandText>select dbo.encode(@hospid)</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="False" AutogeneratedName="hospid" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="@hospid" Precision="0" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="False" SourceVersion="Current">
+                  </Parameter>
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="NeonatalConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="True" GeneratorSourceName="Decode" MethodsParameterType="CLR" Modifier="Public" Name="Decode" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy2" UserSourceName="Decode">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="True">
+                <CommandText>select dbo.decode(@value)</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="False" AutogeneratedName="value" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="@value" Precision="0" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="False" SourceVersion="Current">
+                  </Parameter>
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Neodataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Neodataset" msprop:Generator_DataSetName="Neodataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NeoStaff" msprop:Generator_UserTableName="NeoStaff" msprop:Generator_RowDeletedName="NeoStaffRowDeleted" msprop:Generator_RowChangedName="NeoStaffRowChanged" msprop:Generator_RowClassName="NeoStaffRow" msprop:Generator_RowChangingName="NeoStaffRowChanging" msprop:Generator_RowEvArgName="NeoStaffRowChangeEvent" msprop:Generator_RowEvHandlerName="NeoStaffRowChangeEventHandler" msprop:Generator_TableClassName="NeoStaffDataTable" msprop:Generator_TableVarName="tableNeoStaff" msprop:Generator_RowDeletingName="NeoStaffRowDeleting" msprop:Generator_TablePropName="NeoStaff">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StaffID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="StaffID" msprop:Generator_ColumnVarNameInTable="columnStaffID" msprop:Generator_ColumnPropNameInRow="StaffID" msprop:Generator_ColumnPropNameInTable="StaffIDColumn" type="xs:string" />
+              <xs:element name="ServerID" msprop:Generator_UserColumnName="ServerID" msprop:Generator_ColumnVarNameInTable="columnServerID" msprop:Generator_ColumnPropNameInRow="ServerID" msprop:Generator_ColumnPropNameInTable="ServerIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HospitalID" msprop:Generator_UserColumnName="HospitalID" msprop:Generator_ColumnVarNameInTable="columnHospitalID" msprop:Generator_ColumnPropNameInRow="HospitalID" msprop:Generator_ColumnPropNameInTable="HospitalIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StaffName" msprop:Generator_UserColumnName="StaffName" msprop:Generator_ColumnVarNameInTable="columnStaffName" msprop:Generator_ColumnPropNameInRow="StaffName" msprop:Generator_ColumnPropNameInTable="StaffNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Job" msprop:Generator_UserColumnName="Job" msprop:Generator_ColumnVarNameInTable="columnJob" msprop:Generator_ColumnPropNameInRow="Job" msprop:Generator_ColumnPropNameInTable="JobColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="StaffOrder" msprop:Generator_UserColumnName="StaffOrder" msprop:Generator_ColumnVarNameInTable="columnStaffOrder" msprop:Generator_ColumnPropNameInRow="StaffOrder" msprop:Generator_ColumnPropNameInTable="StaffOrderColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="usercode" msprop:Generator_UserColumnName="usercode" msprop:Generator_ColumnVarNameInTable="columnusercode" msprop:Generator_ColumnPropNameInRow="usercode" msprop:Generator_ColumnPropNameInTable="usercodeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="passw" msprop:Generator_UserColumnName="passw" msprop:Generator_ColumnVarNameInTable="columnpassw" msprop:Generator_ColumnPropNameInRow="passw" msprop:Generator_ColumnPropNameInTable="passwColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="passwdatechanged" msprop:Generator_UserColumnName="passwdatechanged" msprop:Generator_ColumnVarNameInTable="columnpasswdatechanged" msprop:Generator_ColumnPropNameInRow="passwdatechanged" msprop:Generator_ColumnPropNameInTable="passwdatechangedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="lastlogon" msprop:Generator_UserColumnName="lastlogon" msprop:Generator_ColumnVarNameInTable="columnlastlogon" msprop:Generator_ColumnPropNameInRow="lastlogon" msprop:Generator_ColumnPropNameInTable="lastlogonColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="menuaudit" msprop:Generator_UserColumnName="menuaudit" msprop:Generator_ColumnVarNameInTable="columnmenuaudit" msprop:Generator_ColumnPropNameInRow="menuaudit" msprop:Generator_ColumnPropNameInTable="menuauditColumn" type="xs:short" />
+              <xs:element name="menulockdata" msprop:Generator_UserColumnName="menulockdata" msprop:Generator_ColumnVarNameInTable="columnmenulockdata" msprop:Generator_ColumnPropNameInRow="menulockdata" msprop:Generator_ColumnPropNameInTable="menulockdataColumn" type="xs:short" />
+              <xs:element name="menuclinical1" msprop:Generator_UserColumnName="menuclinical1" msprop:Generator_ColumnVarNameInTable="columnmenuclinical1" msprop:Generator_ColumnPropNameInRow="menuclinical1" msprop:Generator_ColumnPropNameInTable="menuclinical1Column" type="xs:short" />
+              <xs:element name="menuclinical2" msprop:Generator_UserColumnName="menuclinical2" msprop:Generator_ColumnVarNameInTable="columnmenuclinical2" msprop:Generator_ColumnPropNameInRow="menuclinical2" msprop:Generator_ColumnPropNameInTable="menuclinical2Column" type="xs:short" />
+              <xs:element name="menuclinical3" msprop:Generator_UserColumnName="menuclinical3" msprop:Generator_ColumnVarNameInTable="columnmenuclinical3" msprop:Generator_ColumnPropNameInRow="menuclinical3" msprop:Generator_ColumnPropNameInTable="menuclinical3Column" type="xs:short" />
+              <xs:element name="menufollowup" msprop:Generator_UserColumnName="menufollowup" msprop:Generator_ColumnVarNameInTable="columnmenufollowup" msprop:Generator_ColumnPropNameInRow="menufollowup" msprop:Generator_ColumnPropNameInTable="menufollowupColumn" type="xs:short" />
+              <xs:element name="menureports" msprop:Generator_UserColumnName="menureports" msprop:Generator_ColumnVarNameInTable="columnmenureports" msprop:Generator_ColumnPropNameInRow="menureports" msprop:Generator_ColumnPropNameInTable="menureportsColumn" type="xs:short" />
+              <xs:element name="ProvNo" msprop:Generator_UserColumnName="ProvNo" msprop:Generator_ColumnVarNameInTable="columnProvNo" msprop:Generator_ColumnPropNameInRow="ProvNo" msprop:Generator_ColumnPropNameInTable="ProvNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Specs" msprop:Generator_UserColumnName="Specs" msprop:Generator_ColumnVarNameInTable="columnSpecs" msprop:Generator_ColumnPropNameInRow="Specs" msprop:Generator_ColumnPropNameInTable="SpecsColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="cate" msprop:Generator_UserColumnName="cate" msprop:Generator_ColumnVarNameInTable="columncate" msprop:Generator_ColumnPropNameInRow="cate" msprop:Generator_ColumnPropNameInTable="cateColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="term" msprop:Generator_UserColumnName="term" msprop:Generator_ColumnVarNameInTable="columnterm" msprop:Generator_ColumnPropNameInRow="term" msprop:Generator_ColumnPropNameInTable="termColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="yr" msprop:Generator_UserColumnName="yr" msprop:Generator_ColumnVarNameInTable="columnyr" msprop:Generator_ColumnPropNameInRow="yr" msprop:Generator_ColumnPropNameInTable="yrColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Provtit" msprop:Generator_UserColumnName="Provtit" msprop:Generator_ColumnVarNameInTable="columnProvtit" msprop:Generator_ColumnPropNameInRow="Provtit" msprop:Generator_ColumnPropNameInTable="ProvtitColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProvDr" msprop:Generator_UserColumnName="ProvDr" msprop:Generator_ColumnVarNameInTable="columnProvDr" msprop:Generator_ColumnPropNameInRow="ProvDr" msprop:Generator_ColumnPropNameInTable="ProvDrColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProvDr1" msprop:Generator_UserColumnName="ProvDr1" msprop:Generator_ColumnVarNameInTable="columnProvDr1" msprop:Generator_ColumnPropNameInRow="ProvDr1" msprop:Generator_ColumnPropNameInTable="ProvDr1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Provsec" msprop:Generator_UserColumnName="Provsec" msprop:Generator_ColumnVarNameInTable="columnProvsec" msprop:Generator_ColumnPropNameInRow="Provsec" msprop:Generator_ColumnPropNameInTable="ProvsecColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="P_addr1" msprop:Generator_UserColumnName="P_addr1" msprop:Generator_ColumnVarNameInTable="columnP_addr1" msprop:Generator_ColumnPropNameInRow="P_addr1" msprop:Generator_ColumnPropNameInTable="P_addr1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="P_addr1a" msprop:Generator_UserColumnName="P_addr1a" msprop:Generator_ColumnVarNameInTable="columnP_addr1a" msprop:Generator_ColumnPropNameInRow="P_addr1a" msprop:Generator_ColumnPropNameInTable="P_addr1aColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="P_addr2" msprop:Generator_UserColumnName="P_addr2" msprop:Generator_ColumnVarNameInTable="columnP_addr2" msprop:Generator_ColumnPropNameInRow="P_addr2" msprop:Generator_ColumnPropNameInTable="P_addr2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="P_addr3" msprop:Generator_UserColumnName="P_addr3" msprop:Generator_ColumnVarNameInTable="columnP_addr3" msprop:Generator_ColumnPropNameInRow="P_addr3" msprop:Generator_ColumnPropNameInTable="P_addr3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="P_code" msprop:Generator_UserColumnName="P_code" msprop:Generator_ColumnVarNameInTable="columnP_code" msprop:Generator_ColumnPropNameInRow="P_code" msprop:Generator_ColumnPropNameInTable="P_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="P_wkarea" msprop:Generator_UserColumnName="P_wkarea" msprop:Generator_ColumnVarNameInTable="columnP_wkarea" msprop:Generator_ColumnPropNameInRow="P_wkarea" msprop:Generator_ColumnPropNameInTable="P_wkareaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="P_wkphone" msprop:Generator_UserColumnName="P_wkphone" msprop:Generator_ColumnVarNameInTable="columnP_wkphone" msprop:Generator_ColumnPropNameInRow="P_wkphone" msprop:Generator_ColumnPropNameInTable="P_wkphoneColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="P_hmarea" msprop:Generator_UserColumnName="P_hmarea" msprop:Generator_ColumnVarNameInTable="columnP_hmarea" msprop:Generator_ColumnPropNameInRow="P_hmarea" msprop:Generator_ColumnPropNameInTable="P_hmareaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="P_hmphone" msprop:Generator_UserColumnName="P_hmphone" msprop:Generator_ColumnVarNameInTable="columnP_hmphone" msprop:Generator_ColumnPropNameInRow="P_hmphone" msprop:Generator_ColumnPropNameInTable="P_hmphoneColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="P_faxarea" msprop:Generator_UserColumnName="P_faxarea" msprop:Generator_ColumnVarNameInTable="columnP_faxarea" msprop:Generator_ColumnPropNameInRow="P_faxarea" msprop:Generator_ColumnPropNameInTable="P_faxareaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="P_faxphone" msprop:Generator_UserColumnName="P_faxphone" msprop:Generator_ColumnVarNameInTable="columnP_faxphone" msprop:Generator_ColumnPropNameInRow="P_faxphone" msprop:Generator_ColumnPropNameInTable="P_faxphoneColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="P_mobile" msprop:Generator_UserColumnName="P_mobile" msprop:Generator_ColumnVarNameInTable="columnP_mobile" msprop:Generator_ColumnPropNameInRow="P_mobile" msprop:Generator_ColumnPropNameInTable="P_mobileColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="P_pager" msprop:Generator_UserColumnName="P_pager" msprop:Generator_ColumnVarNameInTable="columnP_pager" msprop:Generator_ColumnPropNameInRow="P_pager" msprop:Generator_ColumnPropNameInTable="P_pagerColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="P_note" msprop:Generator_UserColumnName="P_note" msprop:Generator_ColumnVarNameInTable="columnP_note" msprop:Generator_ColumnPropNameInRow="P_note" msprop:Generator_ColumnPropNameInTable="P_noteColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="menuhospadmin" msprop:Generator_UserColumnName="menuhospadmin" msprop:Generator_ColumnVarNameInTable="columnmenuhospadmin" msprop:Generator_ColumnPropNameInRow="menuhospadmin" msprop:Generator_ColumnPropNameInTable="menuhospadminColumn" type="xs:short" />
+              <xs:element name="menuserveradmin" msprop:Generator_UserColumnName="menuserveradmin" msprop:Generator_ColumnVarNameInTable="columnmenuserveradmin" msprop:Generator_ColumnPropNameInRow="menuserveradmin" msprop:Generator_ColumnPropNameInTable="menuserveradminColumn" type="xs:short" />
+              <xs:element name="inactive" msprop:Generator_UserColumnName="inactive" msprop:Generator_ColumnVarNameInTable="columninactive" msprop:Generator_ColumnPropNameInRow="inactive" msprop:Generator_ColumnPropNameInTable="inactiveColumn" type="xs:short" />
+              <xs:element name="HomeSupport" msprop:Generator_UserColumnName="HomeSupport" msprop:Generator_ColumnVarNameInTable="columnHomeSupport" msprop:Generator_ColumnPropNameInRow="HomeSupport" msprop:Generator_ColumnPropNameInTable="HomeSupportColumn" type="xs:short" />
+              <xs:element name="UpdateLists" msprop:Generator_UserColumnName="UpdateLists" msprop:Generator_ColumnVarNameInTable="columnUpdateLists" msprop:Generator_ColumnPropNameInRow="UpdateLists" msprop:Generator_ColumnPropNameInTable="UpdateListsColumn" type="xs:short" />
+              <xs:element name="StatusUpdate" msprop:Generator_UserColumnName="StatusUpdate" msprop:Generator_ColumnVarNameInTable="columnStatusUpdate" msprop:Generator_ColumnPropNameInRow="StatusUpdate" msprop:Generator_ColumnPropNameInTable="StatusUpdateColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="MenuFMU" msprop:Generator_UserColumnName="MenuFMU" msprop:Generator_ColumnVarNameInTable="columnMenuFMU" msprop:Generator_ColumnPropNameInRow="MenuFMU" msprop:Generator_ColumnPropNameInTable="MenuFMUColumn" type="xs:short" />
+              <xs:element name="HospName" msprop:Generator_UserColumnName="HospName" msprop:Generator_ColumnVarNameInTable="columnHospName" msprop:Generator_ColumnPropNameInRow="HospName" msprop:Generator_ColumnPropNameInTable="HospNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email" msdata:ReadOnly="true" msprop:Generator_UserColumnName="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NICUSALL" msprop:Generator_UserColumnName="NICUSALL" msprop:Generator_ColumnVarNameInTable="columnNICUSALL" msprop:Generator_ColumnPropNameInRow="NICUSALL" msprop:Generator_ColumnPropNameInTable="NICUSALLColumn" type="xs:short" />
+              <xs:element name="MobNursingNotes" msprop:Generator_UserColumnName="MobNursingNotes" msprop:Generator_ColumnPropNameInRow="MobNursingNotes" msprop:Generator_ColumnVarNameInTable="columnMobNursingNotes" msprop:Generator_ColumnPropNameInTable="MobNursingNotesColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MobComment" msprop:Generator_UserColumnName="MobComment" msprop:Generator_ColumnVarNameInTable="columnMobComment" msprop:Generator_ColumnPropNameInRow="MobComment" msprop:Generator_ColumnPropNameInTable="MobCommentColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DrugManual" msprop:Generator_UserColumnName="DrugManual" msprop:Generator_ColumnPropNameInRow="DrugManual" msprop:Generator_ColumnVarNameInTable="columnDrugManual" msprop:Generator_ColumnPropNameInTable="DrugManualColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AuditTrail2" msprop:Generator_UserTableName="AuditTrail2" msprop:Generator_RowDeletedName="AuditTrail2RowDeleted" msprop:Generator_RowChangedName="AuditTrail2RowChanged" msprop:Generator_RowClassName="AuditTrail2Row" msprop:Generator_RowChangingName="AuditTrail2RowChanging" msprop:Generator_RowEvArgName="AuditTrail2RowChangeEvent" msprop:Generator_RowEvHandlerName="AuditTrail2RowChangeEventHandler" msprop:Generator_TableClassName="AuditTrail2DataTable" msprop:Generator_TableVarName="tableAuditTrail2" msprop:Generator_RowDeletingName="AuditTrail2RowDeleting" msprop:Generator_TablePropName="AuditTrail2">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HospName" msdata:ReadOnly="true" msprop:Generator_UserColumnName="HospName" msprop:Generator_ColumnVarNameInTable="columnHospName" msprop:Generator_ColumnPropNameInRow="HospName" msprop:Generator_ColumnPropNameInTable="HospNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StaffName" msdata:ReadOnly="true" msprop:Generator_UserColumnName="StaffName" msprop:Generator_ColumnVarNameInTable="columnStaffName" msprop:Generator_ColumnPropNameInRow="StaffName" msprop:Generator_ColumnPropNameInTable="StaffNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Position" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Position" msprop:Generator_ColumnVarNameInTable="columnPosition" msprop:Generator_ColumnPropNameInRow="Position" msprop:Generator_ColumnPropNameInTable="PositionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Activity" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Activity" msprop:Generator_ColumnVarNameInTable="columnActivity" msprop:Generator_ColumnPropNameInRow="Activity" msprop:Generator_ColumnPropNameInTable="ActivityColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Recent" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Recent" msprop:Generator_ColumnVarNameInTable="columnRecent" msprop:Generator_ColumnPropNameInRow="Recent" msprop:Generator_ColumnPropNameInTable="RecentColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AuditTrail1" msprop:Generator_UserTableName="AuditTrail1" msprop:Generator_RowDeletedName="AuditTrail1RowDeleted" msprop:Generator_RowChangedName="AuditTrail1RowChanged" msprop:Generator_RowClassName="AuditTrail1Row" msprop:Generator_RowChangingName="AuditTrail1RowChanging" msprop:Generator_RowEvArgName="AuditTrail1RowChangeEvent" msprop:Generator_RowEvHandlerName="AuditTrail1RowChangeEventHandler" msprop:Generator_TableClassName="AuditTrail1DataTable" msprop:Generator_TableVarName="tableAuditTrail1" msprop:Generator_RowDeletingName="AuditTrail1RowDeleting" msprop:Generator_TablePropName="AuditTrail1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StaffName" msprop:Generator_UserColumnName="StaffName" msprop:Generator_ColumnPropNameInRow="StaffName" msprop:Generator_ColumnVarNameInTable="columnStaffName" msprop:Generator_ColumnPropNameInTable="StaffNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Position" msprop:Generator_UserColumnName="Position" msprop:Generator_ColumnPropNameInRow="Position" msprop:Generator_ColumnVarNameInTable="columnPosition" msprop:Generator_ColumnPropNameInTable="PositionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EditDate" msprop:Generator_UserColumnName="EditDate" msprop:Generator_ColumnPropNameInRow="EditDate" msprop:Generator_ColumnVarNameInTable="columnEditDate" msprop:Generator_ColumnPropNameInTable="EditDateColumn" type="xs:dateTime" />
+              <xs:element name="Baby" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Baby" msprop:Generator_ColumnPropNameInRow="Baby" msprop:Generator_ColumnVarNameInTable="columnBaby" msprop:Generator_ColumnPropNameInTable="BabyColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="102" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FormEdit" msprop:Generator_UserColumnName="FormEdit" msprop:Generator_ColumnPropNameInRow="FormEdit" msprop:Generator_ColumnVarNameInTable="columnFormEdit" msprop:Generator_ColumnPropNameInTable="FormEditColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NICUSExport" msprop:Generator_UserTableName="NICUSExport" msprop:Generator_RowDeletedName="NICUSExportRowDeleted" msprop:Generator_RowChangedName="NICUSExportRowChanged" msprop:Generator_RowClassName="NICUSExportRow" msprop:Generator_RowChangingName="NICUSExportRowChanging" msprop:Generator_RowEvArgName="NICUSExportRowChangeEvent" msprop:Generator_RowEvHandlerName="NICUSExportRowChangeEventHandler" msprop:Generator_TableClassName="NICUSExportDataTable" msprop:Generator_TableVarName="tableNICUSExport" msprop:Generator_RowDeletingName="NICUSExportRowDeleting" msprop:Generator_TablePropName="NICUSExport">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NeoStaffReports" msprop:Generator_UserTableName="NeoStaffReports" msprop:Generator_RowDeletedName="NeoStaffReportsRowDeleted" msprop:Generator_RowChangedName="NeoStaffReportsRowChanged" msprop:Generator_RowClassName="NeoStaffReportsRow" msprop:Generator_RowChangingName="NeoStaffReportsRowChanging" msprop:Generator_RowEvArgName="NeoStaffReportsRowChangeEvent" msprop:Generator_RowEvHandlerName="NeoStaffReportsRowChangeEventHandler" msprop:Generator_TableClassName="NeoStaffReportsDataTable" msprop:Generator_TableVarName="tableNeoStaffReports" msprop:Generator_RowDeletingName="NeoStaffReportsRowDeleting" msprop:Generator_TablePropName="NeoStaffReports">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Report" msprop:Generator_UserColumnName="Report" msprop:Generator_ColumnVarNameInTable="columnReport" msprop:Generator_ColumnPropNameInRow="Report" msprop:Generator_ColumnPropNameInTable="ReportColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Start" msprop:Generator_UserColumnName="Start" msprop:Generator_ColumnVarNameInTable="columnStart" msprop:Generator_ColumnPropNameInRow="Start" msprop:Generator_ColumnPropNameInTable="StartColumn" type="xs:dateTime" />
+              <xs:element name="User_x0020_Controlled" msdata:ReadOnly="true" msprop:Generator_UserColumnName="User Controlled" msprop:Generator_ColumnVarNameInTable="columnUser_Controlled" msprop:Generator_ColumnPropNameInRow="User_Controlled" msprop:Generator_ColumnPropNameInTable="User_ControlledColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReportID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ReportID" msprop:Generator_ColumnPropNameInRow="ReportID" msprop:Generator_ColumnVarNameInTable="columnReportID" msprop:Generator_ColumnPropNameInTable="ReportIDColumn" type="xs:int" />
+              <xs:element name="Frequency" msprop:Generator_UserColumnName="Frequency" msprop:Generator_ColumnPropNameInRow="Frequency" msprop:Generator_ColumnVarNameInTable="columnFrequency" msprop:Generator_ColumnPropNameInTable="FrequencyColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ReportServerReports" msprop:Generator_UserTableName="ReportServerReports" msprop:Generator_RowDeletedName="ReportServerReportsRowDeleted" msprop:Generator_RowChangedName="ReportServerReportsRowChanged" msprop:Generator_RowClassName="ReportServerReportsRow" msprop:Generator_RowChangingName="ReportServerReportsRowChanging" msprop:Generator_RowEvArgName="ReportServerReportsRowChangeEvent" msprop:Generator_RowEvHandlerName="ReportServerReportsRowChangeEventHandler" msprop:Generator_TableClassName="ReportServerReportsDataTable" msprop:Generator_TableVarName="tableReportServerReports" msprop:Generator_RowDeletingName="ReportServerReportsRowDeleting" msprop:Generator_TablePropName="ReportServerReports">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Report" msprop:Generator_UserColumnName="Report" msprop:Generator_ColumnVarNameInTable="columnReport" msprop:Generator_ColumnPropNameInRow="Report" msprop:Generator_ColumnPropNameInTable="ReportColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Frequency" msprop:Generator_UserColumnName="Frequency" msprop:Generator_ColumnVarNameInTable="columnFrequency" msprop:Generator_ColumnPropNameInRow="Frequency" msprop:Generator_ColumnPropNameInTable="FrequencyColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LocalQuery" msprop:Generator_UserColumnName="LocalQuery" msprop:Generator_ColumnVarNameInTable="columnLocalQuery" msprop:Generator_ColumnPropNameInRow="LocalQuery" msprop:Generator_ColumnPropNameInTable="LocalQueryColumn" type="xs:short" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NeoStaffReports1" msprop:Generator_UserTableName="NeoStaffReports1" msprop:Generator_RowDeletedName="NeoStaffReports1RowDeleted" msprop:Generator_RowChangedName="NeoStaffReports1RowChanged" msprop:Generator_RowClassName="NeoStaffReports1Row" msprop:Generator_RowChangingName="NeoStaffReports1RowChanging" msprop:Generator_RowEvArgName="NeoStaffReports1RowChangeEvent" msprop:Generator_RowEvHandlerName="NeoStaffReports1RowChangeEventHandler" msprop:Generator_TableClassName="NeoStaffReports1DataTable" msprop:Generator_TableVarName="tableNeoStaffReports1" msprop:Generator_RowDeletingName="NeoStaffReports1RowDeleting" msprop:Generator_TablePropName="NeoStaffReports1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StaffID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="StaffID" msprop:Generator_ColumnVarNameInTable="columnStaffID" msprop:Generator_ColumnPropNameInRow="StaffID" msprop:Generator_ColumnPropNameInTable="StaffIDColumn" type="xs:string" />
+              <xs:element name="Report" msprop:Generator_UserColumnName="Report" msprop:Generator_ColumnVarNameInTable="columnReport" msprop:Generator_ColumnPropNameInRow="Report" msprop:Generator_ColumnPropNameInTable="ReportColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Start" msprop:Generator_UserColumnName="Start" msprop:Generator_ColumnVarNameInTable="columnStart" msprop:Generator_ColumnPropNameInRow="Start" msprop:Generator_ColumnPropNameInTable="StartColumn" type="xs:dateTime" />
+              <xs:element name="Stop" msprop:Generator_UserColumnName="Stop" msprop:Generator_ColumnVarNameInTable="columnStop" msprop:Generator_ColumnPropNameInRow="Stop" msprop:Generator_ColumnPropNameInTable="StopColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CreateDate" msprop:Generator_UserColumnName="CreateDate" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" type="xs:dateTime" />
+              <xs:element name="usercontrolled" msprop:Generator_UserColumnName="usercontrolled" msprop:Generator_ColumnVarNameInTable="columnusercontrolled" msprop:Generator_ColumnPropNameInRow="usercontrolled" msprop:Generator_ColumnPropNameInTable="usercontrolledColumn" type="xs:short" />
+              <xs:element name="ReportID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ReportID" msprop:Generator_ColumnVarNameInTable="columnReportID" msprop:Generator_ColumnPropNameInRow="ReportID" msprop:Generator_ColumnPropNameInTable="ReportIDColumn" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:NeoStaff" />
+      <xs:field xpath="mstns:ServerID" />
+      <xs:field xpath="mstns:HospitalID" />
+      <xs:field xpath="mstns:StaffName" />
+    </xs:unique>
+    <xs:unique name="NeoStaffReports1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:NeoStaffReports1" />
+      <xs:field xpath="mstns:StaffID" />
+      <xs:field xpath="mstns:Report" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

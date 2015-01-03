@@ -39,6 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -57,6 +58,62 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Mobile\MobileMasterPage.master" />
+    <Content Include="App_Code\CCL1.xsc">
+      <DependentUpon>CCL1.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Code\CCL1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CCL1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Code\CCL1.xss">
+      <DependentUpon>CCL1.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Code\Neodataset.xsc">
+      <DependentUpon>Neodataset.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Code\Neodataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Neodataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Code\Neodataset.xss">
+      <DependentUpon>Neodataset.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Code\NICUS.xsc">
+      <DependentUpon>NICUS.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Code\NICUS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NICUS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Code\NICUS.xss">
+      <DependentUpon>NICUS.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Code\Patient.xsc">
+      <DependentUpon>Patient.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Code\Patient.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Patient.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Code\Patient.xss">
+      <DependentUpon>Patient.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Code\StorProcData.xsc">
+      <DependentUpon>StorProcData.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Code\StorProcData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StorProcData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Code\StorProcData.xss">
+      <DependentUpon>StorProcData.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -66,9 +123,50 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Global.asax" />
+    <Content Include="Mobile\mobile.css" />
+    <Content Include="Mobile\MobLogon.aspx" />
+    <Content Include="Mobile\MobLogon.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Mobile\NewPatient.aspx" />
+    <Content Include="Mobile\NewPatient.aspx.vb" />
+    <Content Include="Mobile\Patient.aspx" />
+    <Content Include="Mobile\Patient.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Mobile\PatientList.aspx" />
+    <Content Include="Mobile\PatientList.aspx.vb" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\CCL1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCL1.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Code\Neodataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Neodataset.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Code\NICUS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NICUS.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Code\Patient.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Patient.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Code\StorProcData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StorProcData.xsd</DependentUpon>
+    </Content>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
